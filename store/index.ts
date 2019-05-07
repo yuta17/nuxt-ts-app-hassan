@@ -8,6 +8,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: root.state(),
     modules: {
+      [todos.name]: todos
     }
   })
 }
