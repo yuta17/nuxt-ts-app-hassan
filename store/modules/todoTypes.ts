@@ -1,18 +1,23 @@
 export interface Todo {
-  id: number,
+  id: number
   content: string
+  isEditing: boolean
+}
+
+export class TodoClass implements Todo {
+  id: number;
+  content: string;
+  isEditing: boolean;
+
+  constructor(id: number, content: string, isEditing: boolean) {
+    this.id = id;
+    this.content = content;
+    this.isEditing = isEditing;
+  }
 }
 
 export interface State {
   todos: Todo[]
 }
 
-export class TodoClass implements Todo {
-  id: number;
-  content: string;
 
-  constructor(id: number, content: string) {
-    this.id = id;
-    this.content = content;
-  }
-}
