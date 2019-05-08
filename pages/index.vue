@@ -1,14 +1,19 @@
 <template>
-  <HelloWorld />
+  <div>
+    <NewTodo />
+    <TodoList />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from '~/components/HelloWorld.vue'
+import TodoList from '~/components/TodoList.vue'
+import NewTodo from '~/components/NewTodo.vue'
 
 @Component({
   components: {
-    HelloWorld
+    TodoList,
+    NewTodo
   }
 })
 export default class Home extends Vue {}
